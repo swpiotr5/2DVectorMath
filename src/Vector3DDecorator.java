@@ -25,7 +25,7 @@ public class Vector3DDecorator implements IVector{
         return new double[]{x, y, z};
     }
     public Vector3DDecorator cross(IVector param) {
-        double[] srcComponents = srcVector.getComponents();
+        double[] srcComponents = this.getComponents();
         double[] paramComponents = param.getComponents();
         double x1 = srcComponents[0];
         double y1 = srcComponents[1];
@@ -33,9 +33,6 @@ public class Vector3DDecorator implements IVector{
         double x2 = paramComponents[0];
         double y2 = paramComponents[1];
         double z2 = paramComponents[2];
-
-        // [x1,y1,z]
-        // [x2,y2,z]
 
         double crossX = y1*z2 - z1*y2;
         double crossY = z1*x2 - x1*z2;
