@@ -6,9 +6,9 @@ public class Main {
         DecimalFormat df = new DecimalFormat("#.##");
 
         // Tworzenie trzech przykładowych wektorów
-        Vector2D vector1 = new Vector2D(3.0, 4.0);
-        Vector2D vector2 = new Vector2D(1.0, 2.0);
-        Vector2D vector3 = new Vector2D(5.0, 6.0);
+        Vector2D vector1 = new Vector2D(5.0, 2.0);
+        Vector2D vector2 = new Vector2D(1.0, 5.0);
+        Vector2D vector3 = new Vector2D(2.0, 6.0);
 
         // Wyświetlanie współrzędnych w układach kartezjańskim
         System.out.println("Współrzędne kartezjańskie:");
@@ -28,9 +28,9 @@ public class Main {
         System.out.println("Vector3 w biegunowych: (r=" + vector3_adapt.abs() + ", θ=" + vector3_adapt.getAngle() + ")");
         System.out.println();
 
-        Polar2DInheritance vector1_inherit = new Polar2DInheritance(3.0, 4.0);
-        Polar2DInheritance vector2_inherit = new Polar2DInheritance(1.0, 2.0);
-        Polar2DInheritance vector3_inherit = new Polar2DInheritance(5.0, 6.0);
+        Polar2DInheritance vector1_inherit = new Polar2DInheritance(5.0, 2.0);
+        Polar2DInheritance vector2_inherit = new Polar2DInheritance(1.0, 5.0);
+        Polar2DInheritance vector3_inherit = new Polar2DInheritance(2.0, 6.0);
 
         // Obliczanie współrzędnych biegunowych i ich wyświetlanie - dziedziczenie
         System.out.println("Współrzędne biegunowe - dziedziczenie:");
@@ -51,9 +51,9 @@ public class Main {
         System.out.println();
 
         //Obliczanie iloczynu wektorowego - dziedziczenie
-        Vector3DInheritance vector1_3d_i = new Vector3DInheritance(3, 4, 0);
-        Vector3DInheritance vector2_3d_i = new Vector3DInheritance(1, 2, 0);
-        Vector3DInheritance vector3_3d_i = new Vector3DInheritance(5, 6, 0);
+        Vector3DInheritance vector1_3d_i = new Vector3DInheritance(5, 2, 0);
+        Vector3DInheritance vector2_3d_i = new Vector3DInheritance(1, 5, 0);
+        Vector3DInheritance vector3_3d_i = new Vector3DInheritance(2, 6, 0);
 
         Vector3DInheritance crossProduct12 = vector1_3d_i.cross(vector2_3d_i);
         Vector3DInheritance crossProduct13 = vector1_3d_i.cross(vector3_3d_i);

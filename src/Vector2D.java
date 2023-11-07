@@ -8,7 +8,8 @@ public class Vector2D implements IVector{
     }
     @Override
     public double abs() {
-        return Math.sqrt(x * x + y * y);
+        double result = Math.sqrt(x * x + y * y);
+        return Math.round(result * 100.0) / 100.0;
     }
 
     @Override

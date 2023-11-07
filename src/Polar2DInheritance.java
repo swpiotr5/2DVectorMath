@@ -8,19 +8,19 @@ public class Polar2DInheritance extends Vector2D {
 
         if (x > 0) {
             if (y >= 0) {
-                return Math.atan(y / x); // Kąt w I ćwiartce
+                return Math.round(Math.toDegrees(Math.atan(y / x)) * 100.0) / 100.0; // Kąt w I ćwiartce
             } else {
-                return 2 * Math.PI + Math.atan(y / x); // Kąt w IV ćwiartce
+                return Math.round((Math.toDegrees(2 * Math.PI + Math.atan(y / x)) * 100.0) / 100.0); // Kąt w IV ćwiartce
             }
         } else if (x < 0) {
-            return Math.PI + Math.atan(y / x); // Kąt w II ćwiartce
+            return Math.round((Math.toDegrees(Math.PI + Math.atan(y / x)) * 100.0) / 100.0); // Kąt w II ćwiartce
         } else {
             if (y > 0) {
-                return Math.PI / 2; // Kąt na dodatniej półosi Y
+                return Math.round((Math.toDegrees(Math.PI / 2) * 100.0) / 100.0); // Kąt na dodatniej półosi Y
             } else if (y < 0) {
-                return 3 * Math.PI / 2; // Kąt na ujemnej półosi Y
+                return Math.round((Math.toDegrees(3 * Math.PI / 2) * 100.0) / 100.0); // Kąt na ujemnej półosi Y
             } else {
-                return 0; // Dla punktu (0, 0)
+                return 0.0; // Dla punktu (0, 0)
             }
         }
     }
